@@ -1,0 +1,9 @@
+function txt = myupdatefcn2(~,event_obj,dist)
+% To pick data from the pointcloud and check the mahalanobis distances
+pos = get(event_obj,'Position');
+I = get(event_obj, 'DataIndex');
+a=num2str(dist(I));
+txt = {['X: ',num2str(pos(1))],...
+       ['Y: ',num2str(pos(2))],...
+       ['Z: ',num2str(pos(3))],...
+       ['Dist: ',a]};
